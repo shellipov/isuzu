@@ -1,0 +1,88 @@
+<div> <a href="/admin">Вернуться в меню</a>
+
+<form class="vertical-menu centre" action="/configuration/changeparams" method="post">
+  <div>
+    <h2><label>Название конфигурации:{{data.configuration.name}}</label></h2>
+  </div>
+
+
+<input type="text" hidden="true" name="name"value="{{data.configuration.name}}"/>
+
+
+  <div>
+    <label><h4>Текущий двигатель</h4>{{data.configuration.engine.name}}</label>
+    <div>заменить на</div>
+  <select class="input" name='engine'>
+  {{#each data.engine}}
+    <option value="{{this.name}}">{{this.name}}</option>
+  {{/each}}
+  </select>
+  </div>
+
+  <div>
+    <label><h4>Текущий каркас</h4>{{data.configuration.carcass.name}}</label>
+    <div>заменить на</div>
+  <select class="input" name='carcass'>
+  {{#each data.carcass}}
+    <option value="{{this.name}}">{{this.name}}</option>
+  {{/each}}
+  </select>
+  </div>
+
+  <div>
+    <label><h4>Текущая коробка передач</h4>{{data.configuration.transmission.name}}</label>
+    <div>заменить на</div>
+   <select class="input" name='transmission'>
+  {{#each data.transmission}}
+    <option value="{{this.name}}">{{this.name}}</option>
+  {{/each}}
+  </select>
+  </div>
+
+  <div>
+     <label><h4>Текущий цвет</h4>{{data.configuration.color.name}}</label>
+    <div>заменить на</div>
+   <select class="input" name='color'>
+  {{#each data.color}}
+    <option value="{{this.name}}">{{this.name}}</option>
+  {{/each}}
+  </select>
+  </div>
+
+  <div>
+     <label><h4>Текущее отображение на главной странице</h4>{{data.configuration.flag}}</label>
+    <div>заменить на</div>
+   <select class="input" name='flag'>
+    <option value="true">Да</option>
+    <option value="false">Нет</option>
+  </select>
+  </div>
+
+  <div>
+     <label><h4>Текущее колличество мест</h4>{{data.configuration.numberofseats}}</label>
+    <div>заменить на</div>
+    <input type="text" name="numberofseats" pattern="[0-9]{,3}" required/>
+  </div>
+
+  <div>
+      <label><h4>Текущий дорожный просвет</h4>{{data.configuration.groundclearance}}</label>
+    <div>заменить на</div>
+    <input type="text" name="groundclearance" pattern="[0-9]{,3}" required/>
+  </div>
+
+  <div>
+      <label><h4>Текущаяя грузоподъемность</h4>{{data.configuration.carrying}}</label>
+    <div>заменить на</div>
+    <input type="text" name="carrying" pattern="[0-9]{,6}" required/>
+  </div>
+
+  <div>
+      <label><h4>Текущаяя стоимость</h4>{{data.configuration.price}}</label>
+    <div>заменить на</div>
+    <input type="text" name="price" pattern="[0-9]{,15}" required/>
+  </div>
+
+  <div>
+    <input type="submit" value="Создать" />
+  </div>
+</form>

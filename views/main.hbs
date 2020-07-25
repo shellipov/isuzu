@@ -1,0 +1,34 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a href="/" class="navbar-brand">Главная</a>
+  <form class="form-inline">
+    <button class="btn btn-danger" type="button"><a class="config-login" href="/login">Войти</a></button>
+  </form>
+</nav>
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">ISUZU D-MAX</h1>
+    <p class="lead">Конфигуратор ISUZU</p>
+    <button type="button" class="btn btn-danger"><a class='config-a' href="/configurator">Конфигуратор</a></button>
+  </div>
+</div>
+
+{{!-- отрисовка конфигураций --}}
+<div class="card-group">
+  {{#each homeConfig}}
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{this.name}}</h5>
+      <p class="card-text"><h6>Двигатель: </h6> {{this.engine.name}} {{this.engine.value}} {{this.engine.power}}
+        {{this.engine.enginePistons}}</p>
+      <p class="card-text"><h6>Форма кузова:</h6>{{this.carcass.name}} {{this.carcass.type}}</p>
+      <p class="card-text"><h6>Коробка передач:</h6>{{this.transmission.name}} {{this.transmission.type}} {{this.transmission.gearstages}}</p>
+      <p class="card-text"><h6>Цвет:</h6>{{this.color.name}}</p>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+
+<img src="/pictures/isuzu.jpg" class="img-fluid" alt="Responsive image">

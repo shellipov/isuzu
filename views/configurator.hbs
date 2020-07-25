@@ -1,0 +1,58 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a href="/" class="navbar-brand">Главная</a>
+  <form class="form-inline">
+    <button class="btn btn-danger" type="button"><a class="config-login" href="/login">Войти</a></button>
+  </form>
+</nav>
+
+<script defer src="js/application.js"></script>
+<div class="main-part">
+  <div class="main-page-white">
+    <h2 class="config-h2">Конфигуратор</h2>
+    <hr>
+    <div class="config-form">
+      <form id='configForm' action="/comparison" method="POST">
+        <div>Выберите комплектацию</div>
+        <select class='select' name="configuration" id="configuration">
+          {{#each configuration}}
+          <option value="{{this.name}}">{{this.name}}</option>
+          {{/each}}
+        </select>
+        <div>Выберите двигатель</div>
+        <select class='select' name="engine" id="engine">
+          {{#each engine}}
+          <option value="{{this.name}}">{{this.name}}</option>
+          {{/each}}
+        </select>
+        <div>Выберите каркас</div>
+        <select class='select' name="carcass" id="carcass">
+          {{#each carcass}}
+          <option value="{{this.name}}">{{this.name}}</option>
+          {{/each}}
+        </select>
+        <div>Выберите трансмиссию</div>
+        <select class='select' name="transmission" id="transmission">
+          {{#each transmission}}
+          <option value="{{this.name}}">{{this.name}}</option>
+          {{/each}}
+        </select>
+        <div>Выберите цвет</div>
+        <select class='select' name="color" id="color">  
+          {{#each color}}
+          <option value="{{name}}">{{name}}</option>
+          {{/each}}
+        </select> 
+        <br>
+        <img src="https://www.isuzu-dmax.ru/static/slider/terra/white/1.jpg" id="smallImage"></img>
+        <button id="buttonSum">Узнать стоимость комплектации</button>
+        <div class="sum"> Стоимость: 2169000 руб. </div>
+        <button type="submit" id="buttonCompare">Сравнить с другими предложениями</button>
+
+        <input hidden=true type="text" id="total" name="price" value='2169000'></input>
+        <input hidden=true type="text" id="total" name="name" value="Isuzu Dmax"></input>
+        <br>
+        <br>
+      </form>
+    </div>
+  </div>
+</div>

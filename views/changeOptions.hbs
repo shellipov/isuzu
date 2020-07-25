@@ -1,0 +1,62 @@
+{{#if engine}}
+<form action="/options/changeoptions" method="POST">
+  <option name="carcass">Название двигателя</option>
+  <select name="engineOldName" id="engine">
+    {{#each engine}}
+    <option value="{{this.name}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <option name="carcass">Новые параметры этого двигателя</option>
+  <input type="text" placeholder="Название" name="engineName">
+  <input type="text" placeholder="Объем" name="engineVolume">
+  <input type="text" placeholder="Поршни" name="enginePower">
+  <input type="text" placeholder="Тип двигателя" name="engineType">
+  <button class="add" type="submit">Добавить</button>
+</form>
+{{/if}}
+
+{{#if carcass}}
+<form action="/options/changeoptions" method="POST">
+  <option name="carcass">Название каркаса</option>
+  <select name="carcassOldName">
+    {{#each carcass}}
+    <option value="{{this.name}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <option name="carcass">Новые параметры этого каркаса</option>
+  <input type="text" placeholder="Название" name="carcassName">
+  <input type="text" placeholder="Тип каркаса" name="carcassType">
+  <button class="add" type="submit">Добавить</button>
+</form>
+{{/if}}
+
+{{#if transmission}}
+<form action="/options/changeoptions" method="POST">
+  <option name="transmission">Название трансмиссии</option>
+  <select name="transOldName">
+    {{#each transmission}}
+    <option value="{{this.name}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <option name="transmission">Новые параметры этой трансмиссии</option>
+  <input type="text" placeholder="Название" name="transName">
+  <input type="text" placeholder="Количество передач" name="transCount">
+  <input type="text" placeholder="Тип коробки" name="transType">
+  <button class="add" type="submit">Добавить</button>
+</form>
+{{/if}}
+
+{{#if color}}
+<form action="/options/changeoptions" method="POST">
+  <option name="color">Название цвета</option>
+  <select name="colorOld">
+    {{#each color}}
+    <option value="{{this.name}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <option name="color">Новые параметры этого цвета</option>
+  <input type="text" placeholder="Название" name="color">
+  <input type="text" placeholder="Ссылка на фотографию" name="urlImage">
+  <button class="add" type="submit">Добавить</button>
+</form>
+{{/if}}

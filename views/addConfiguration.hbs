@@ -1,0 +1,79 @@
+<h4>Добавить конфигурацию</h4>
+
+<div> <a href="/admin">Вернуться в меню</a>
+
+<form class="vertical-menu centre" action="/configuration/add" method="post">
+  <div>
+    <label>Название конфигурации:</label>
+    <input type="text" name="name" required/>
+  </div>
+
+  <div>
+    <label>Двигатель:</label>
+  <select class="input" name='engine'>
+  {{#each engine}}
+    <option value="{{this.name}}">{{this.name}}</option>
+  {{/each}}
+  </select>
+  </div>
+
+  <div>
+    <label>Каркас:</label>
+    <label>Двигатель:</label>
+  <select class="input" name='carcass'>
+  {{#each carcass}}
+    <option value="{{this.name}}">{{this.name}}</option>
+  {{/each}}
+  </select>
+  </div>
+
+  <div>
+    <label>Коробка передач:</label>
+   <select class="input" name='transmission'>
+  {{#each transmission}}
+    <option value="{{this.name}}">{{this.name}}</option>
+  {{/each}}
+  </select>
+  </div>
+
+  <div>
+    <label>Цвет:</label>
+   <select class="input" name='color'>
+  {{#each color}}
+    <option value="{{this.name}}">{{this.name}}</option>
+  {{/each}}
+  </select>
+  </div>
+
+  <div>
+    <label>Отображение на главной странице:</label>
+   <select class="input" name='flag'>
+    <option value="true">Да</option>
+    <option value="false">Нет</option>
+  </select>
+  </div>
+
+  <div>
+    <label>Количество мест:</label>
+    <input type="text" name="numberofseats" pattern="/[0-9]{,3}/" required/>
+  </div>
+
+  <div>
+    <label>Дорожный просвет:</label>
+    <input type="text" name="groundclearance" pattern="[0-9]{,3}" required/>
+  </div>
+
+  <div>
+    <label>Грузоподьемность:</label>
+    <input type="text" name="carrying" pattern="[0-9]{,6}" required/>
+  </div>
+
+  <div>
+    <label>Стоимость:</label>
+    <input type="text" name="price" pattern="[0-9]{,15}" required/>
+  </div>
+
+  <div>
+    <input type="submit" value="Создать" />
+  </div>
+</form>

@@ -1,0 +1,13 @@
+<h5>Выберите пользователя</h5>
+
+<div>
+  <form "vertical-menu centre" action="/admin/delete" method="post"  value={{this.login}}>
+  <select class="input" name='user'>
+  {{#each users}}
+    <option value="{{this.login}}">{{this.name}}</option>
+  {{/each}}
+  </select>
+    <input type="submit" value="Удалить" />
+  </form>
+<div> <a href="/admin">Отмена</a>
+</div>

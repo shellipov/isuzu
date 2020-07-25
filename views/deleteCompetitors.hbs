@@ -1,0 +1,10 @@
+<div>
+  <form action="/anothercar/delete" method="POST">
+    <select name="competitors">
+      {{#each competitors}}
+      <option name={{this.name}}>{{this.name}}</option>
+      {{/each}}
+    </select>
+    <input type="submit" value="Удалить">
+  </form>
+</div>

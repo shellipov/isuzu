@@ -1,0 +1,12 @@
+
+<form class="vertical-menu centre" action="/configuration/change" method="post">
+    <label><h4>Изменить конфигурацию</h4></label>
+  <select class="input" name='name'>
+  {{#each configurations}}
+    <option value="{{this.name}}">{{this.name}}</option>
+  {{/each}}
+  </select>
+  <div>
+    <input type="submit" value="Выбрать" />
+  </div>
+</form>

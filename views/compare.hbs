@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<nav class="navbar navbar-dark bg-dark">
+  <a href="/" class="navbar-brand">Главная</a>
+  <form class="form-inline">
+    <button class="btn btn-danger" type="button"><a class="config-login" href="/login">Войти</a></button>
+  </form>
+</nav>
+
+<body>
+  <div class="wrapper fadeInDown">
+    <h2>Результаты сравнения</h2>
+  </div>
+  <div class="card-group">
+    {{!-- <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Марка, модель</h5>
+      <p class="card-text">Двигатель</p>
+      <p class="card-text">Кузов</p>
+      <p class="card-text">Трансмиссия</p>
+      <p class="card-text">Цвет</p>
+      <p class="card-text">Стоимость</p>
+    </div>
+  </div> --}}
+    {{#each compet}}
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title2">
+          <h4>{{this.name}}</h4>
+        </div>
+        <div class="card-text2">
+          <p>
+          <h5>Двигатель</h5> {{this.engine}}</p>
+        </div>
+        <div class="card-text2">
+          <p>
+          <h5>Кузов</h5>{{this.carcass}}</p>
+        </div>
+        <div class="card-text2">
+          <p>
+          <h5>Трансмиссия</h5>{{this.transmission}} </p>
+        </div>
+        <div class="card-text2">
+          <p>
+          <h5>Цвет</h5>{{this.color}}</p>
+        </div>
+        <div class="card-text2">
+          <p>
+          <h5>Стоимость от {{this.price}} руб.</h5>
+          </p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+
+  </div>
+  <div style="padding: 25px;">
+    <h4><a href="/configurator">Назад</a></h4>
+  </div>
+
+</body>
+
+</html>

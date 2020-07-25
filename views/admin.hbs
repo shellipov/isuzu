@@ -1,0 +1,32 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a href="/" class="navbar-brand">Главная</a>
+  <form class="form-inline">
+    <button class="btn btn-danger" type="button"><a class="config-login" href="/logout">Выйти</a></button>
+  </form>
+</nav>
+
+<div class="flex-menu">
+  <div class="vertical-menu">
+    <h3><a href="/options">Добавить опцию</a></h3>
+    <h3><a href="/options/ch">Изменить опцию</a></h3>
+    <h3><a href="/options/del">Удалить опцию</a></h3>
+  </div>
+  <div class="vertical-menu">
+    <h3><a href="/configuration/add">Добавить конфигурацию</a></h3>
+    <h3><a href="/configuration/change">Изменить конфигурацию</a></h3>
+    <h3><a href="/configuration/del">Удалить конфигурацию</a></h3>
+  </div>
+  <div class="vertical-menu">
+    <h3><a href="/anothercar">Добавить конкурента</a></h3>
+    <h3><a href="/anothercar/change">Изменить конкурента</a></h3>
+    <h3><a href="/anothercar/delete">Удалить конкурента</a></h3>
+  </div>
+  {{#if superadmin}}
+  <div class="vertical-menu">
+    <h3><a href="/admin/add">Добавить администратора</a></h3>
+    <h3><a href="/admin/delete">Удалить администратора</a></h3>
+  </div>
+  {{/if}}
+</div>
+{{!-- <h5><a href="/">Домашняя страница</a></h5>
+<h5><a href="/logout">Выйти</a></h5> --}}

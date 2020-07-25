@@ -1,0 +1,79 @@
+<div> <a href="/admin">Вернуться в меню</a>
+
+  <form class="vertical-menu centre" action="/anothercar/changed" method="post">
+    <div>
+      <h2><label>Название конфигурации:{{competitors.name}}</label></h2>
+    </div>
+
+
+    <input type="text" hidden="true" name="name" value="{{competitors.name}}" />
+
+
+    <div>
+      <label>
+        <h4>Текущий двигатель</h4>{{competitors.engine}}
+      </label>
+      <div>заменить на</div>
+      <input type="text" name="engine">
+    </div>
+
+    <div>
+      <label>
+        <h4>Текущий каркас {{competitors.carcass}}</h4>
+      </label>
+      <div>заменить на</div>
+      <input class="input" type="text" name='carcass'>
+    </div>
+
+    <div>
+      <label>
+        <h4>Текущая коробка передач {{competitors.transmission}}</h4>
+      </label>
+      <div>заменить на</div>
+      <input class="input" type="text" name='transmission'>
+    </div>
+
+    <div>
+      <label>
+        <h4>Текущий цвет</h4>{{competitors.color}}
+      </label>
+      <div>заменить на</div>
+      <input class="input" type="text" name='color'>
+    </div>
+
+    <div>
+      <label>
+        <h4>Текущее колличество мест</h4>{{competitors.numberofseats}}
+      </label>
+      <div>заменить на</div>
+      <input type="text" name="numberofseats" required />
+    </div>
+
+    <div>
+      <label>
+        <h4>Текущий дорожный просвет</h4>{{competitors.groundclearance}}
+      </label>
+      <div>заменить на</div>
+      <input type="text" name="groundclearance" required />
+    </div>
+
+    <div>
+      <label>
+        <h4>Текущаяя грузоподъемность</h4>{{competitors.carrying}}
+      </label>
+      <div>заменить на</div>
+      <input type="text" name="carrying" required />
+    </div>
+
+    <div>
+      <label>
+        <h4>Текущаяя стоимость</h4>{{competitors.price}}
+      </label>
+      <div>заменить на</div>
+      <input type="text" name="price" required />
+    </div>
+
+    <div>
+      <input type="submit" value="Создать" />
+    </div>
+  </form>

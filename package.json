@@ -1,0 +1,33 @@
+{
+  "name": "isuzu",
+  "version": "1.0.0",
+  "description": "Front hbs:",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "cookie-parser": "^1.4.5",
+    "express-session": "^1.17.1",
+    "faker": "^4.1.0",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.9.25",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "session-file-store": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shellipov/isuzu.git"
+  },
+  "author": "shellipov@mail.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shellipov/isuzu/issues"
+  },
+  "homepage": "https://github.com/shellipov/isuzu#readme"
+}

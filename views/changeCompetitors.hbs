@@ -1,0 +1,10 @@
+<div>
+  <form action="/anothercar/change" method="POST">
+    <select name="competitors">
+      {{#each competitors}}
+      <option name={{this.name}}>{{this.name}}</option>
+      {{/each}}
+    </select>
+    <input type="submit" value="Изменить">
+  </form>
+</div>

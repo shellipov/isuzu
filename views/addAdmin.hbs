@@ -1,0 +1,34 @@
+<div> <a href="/admin">Вернуться в меню</a>
+
+<form class="vertical-menu centre" action="/admin/add" method="post">
+  <div>
+    <label>Имя сотрудника:</label>
+    <input type="text" name="name" required/>
+  </div>
+  <div>
+    <label>Должность пользователя:</label>
+    <input type="text" name="position" required/>
+  </div>
+  <div>
+    <label>Логин нового пользователя:</label>
+    <input type="text" name="login" required/>
+  </div>
+  <div>
+    <label>Пароль нового пользователя:</label>
+    <input type="password" name="password" required/>
+  </div>
+
+  <div>
+    <label >Права суперадмина:</label>
+    <select class="input" name='superadmin'>
+      <option value='true'>Да</option>
+      <option value='false'>Нет</option>
+    </select>
+  </div>
+
+  <div>
+    <input type="submit" value="Создать" />
+  </div>
+</form>
+
+
