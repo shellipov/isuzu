@@ -3,8 +3,6 @@ const { ConfigurationModel, AdminsModel } = require('../DataBase/Database.js');
 // const{sessionChecker} = require('../middleware/auth.js')
 const session = require("express-session");
 
-
-
 const router = express.Router();
 
 router.get('/', async function (req, res) {
